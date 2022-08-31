@@ -9,6 +9,9 @@ pip install fish_reg
 
 ## Usage
 
+However you use it now it will save the corrected video in the same directory as the original video but with the suffix "_fixed".
+
+
 Basic usage
 ```
 fish_reg_execute path/to/file.tif

@@ -8,6 +8,9 @@ pip install fish_reg
 ```
 
 ## Usage
+Warning! There might be many warnings popping up while the video file is read for whatever reason. Just ignore these.
+
+
 
 However you use it now it will save the corrected video in the same directory as the original video but with the suffix "_fixed".
 

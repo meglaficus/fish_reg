@@ -1,8 +1,11 @@
 from setuptools import setup, find_namespace_packages
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(name='fish_reg',
-      packages=find_namespace_packages(include=["fish_reg/*"]),
-      version='0.0.1',
+      packages=find_namespace_packages(include=["fish_reg", "fish_reg.*"]),
+      version='0.0.2',
       description='fish video registration software',
       url='https://github.com/meglaficus/fish_reg',
       author='Jakob Meglič',
@@ -19,5 +22,6 @@ setup(name='fish_reg',
               'fish_reg_execute = fish_reg.run:main',
           ]
       },
-      keywords=['elastix', 'zebrafish', 'video', 'registration']
+      keywords=['elastix', 'zebrafish', 'video', 'registration'],
+      long_description=long_description
       )

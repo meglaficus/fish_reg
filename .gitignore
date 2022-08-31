@@ -1,4 +1,5 @@
 *.tif
+TransformParameters.0.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

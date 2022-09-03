@@ -6,8 +6,6 @@ from fish_reg.registration import register_video
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("filepath")
-    parser.add_argument("-d", "--directory", help="If the filepath is a directory. Defaults to False.",
-                        action="store_true", default=False)
     parser.add_argument("-r", "--sampling_rate", help="Set every how many slices to perform registration. Defaults to 3.",
                         default=3, type=int, required=False)
     parser.add_argument("-w", "--smoothing_width", help="Set width of smoothing window. Defaults to 8.",
@@ -27,10 +25,11 @@ def main():
     use_slice = args.use_slice
     start_frame = args.start_frame
     end_frame = args.end_frame
-    directory = args.directory
 
-    if directory:
-        for filename in os.listdir(path):
+    if os.path.isdir(path):
+        original_filenames = [i for i in os.listdir(path)]
+
+        for filename in original_filenames:
             if filename.endswith(".tif"):
                 register_video(os.path.join(path, filename), use_slice,
                                start_frame, end_frame, sampling_rate, smoothing_width)

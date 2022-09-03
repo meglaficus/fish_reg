@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(name='fish_reg',
       packages=find_namespace_packages(include=["fish_reg", "fish_reg.*"]),
-      version='0.0.2',
+      version='0.0.3',
       description='fish video registration software',
       url='https://github.com/meglaficus/fish_reg',
       author='Jakob Meglič',

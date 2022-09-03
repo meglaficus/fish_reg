@@ -14,16 +14,14 @@ Warning! There might be many warnings popping up while the video file is read fo
 
 However you use it now it will save the corrected video in the same directory as the original video but with the suffix "_fixed".
 
+<br>
 
 Basic usage
 ```
-fish_reg_execute path/to/file.tif
+fish_reg_execute path/to/file/or/directory
 ```
-Perform on directory of files
-```
-fish_reg_execute path/to/directory -d
-```
-define coarsness of registration (-r) and width of smoothing window (-w)
+
+Define coarsness of registration (-r) and width of smoothing window (-w)
 ```
 fish_reg_execute path/to/file.tif -r 2 -w 5
 ```
@@ -34,6 +32,6 @@ fish_reg_execute path/to/file.tif -sl -s 500 -e 700
 
 
 ## Limitations
+- Annoying warnings when reading video file
 - Tested on single system, might have problems with data from other sources
-- Only works with .tif files
 - Only uses rigid registration, as of yet no option for deformable registration

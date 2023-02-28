@@ -1,6 +1,6 @@
 # fish_reg
 
-Simple program that uses rigid registration to stabilise video of zebrafish under fluorescent microscope.
+Simple program that uses rigid registration with Elastix to stabilise video of zebrafish under fluorescent microscope.
 
 ## Setup
 ```
